@@ -16,7 +16,7 @@ git clone git@github.com:albrom5/eventex.git wttd
 cd wttd
 python -m venv .wttd
 .wttd/Scripts/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 cp contrib/env-sample .env
 python manage.py test
 ```
