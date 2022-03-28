@@ -10,7 +10,7 @@ class SubscriptionDetailGet(TestCase):
             name='Henrique Bastos',
             cpf='12345678901',
             email='henrique@bastos.net',
-         phone='21-996186180'
+            phone='21-996186180'
         )
         self.resp = self.client.get(r('subscriptions:detail', self.obj.pk))
 
