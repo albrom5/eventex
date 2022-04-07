@@ -44,7 +44,7 @@ class Contact(models.Model):
         verbose_name_plural = 'contatos'
 
 
-class Activity(models.Model):
+class Talk(models.Model):
     title = models.CharField('título', max_length=200)
     start = models.TimeField('início', blank=True, null=True)
     description = models.TextField('descrição', blank=True)
@@ -59,14 +59,10 @@ class Activity(models.Model):
     class Meta:
         verbose_name = 'palestra'
         verbose_name_plural = 'palestras'
-        abstract = True
+        ordering = ['start']
 
 
-class Talk(Activity):
-    pass
-
-
-class Course(Activity):
+class Course(Talk):
     slots = models.IntegerField()
 
     class Meta:
